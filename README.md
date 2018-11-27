@@ -12,7 +12,7 @@ You will be able to:
 * Create and interpret a Confusion Matrix using numpy
 * Create and interpret a Confusion Matrix using sklearn
 
-### How to Evaluate Classifier Performance?
+## How to Evaluate Classifier Performance?
 
 So far, we've spent most of our time learning the ins and outs of Regression Analysis.  Regression allows us to answer "how much/how many" questions. We've learned how to interpret important regression model statistics such as $R^2$ and select appropriate predictors by evaluating their p-values. However, the statistics that help us evaluate the quality of our regression models aren't something we can use to evaluate the performance of a classifier. For that, we need a **_Confusion Matrix_**! 
 
@@ -34,7 +34,7 @@ As we can see, one axis of the Confusion Matrix represents the ground-truth valu
 
 Take another look at the diagram above and see if you can figure out which cell which cells represent TP, FP, and FN. 
 
-### Constructing a Confusion Matrix
+## Constructing a Confusion Matrix
 
 In order to construct a Confusion Matrix, we need 2 things:
 
@@ -82,13 +82,13 @@ confusion_matrix(example_labels, example_preds)
 
 
 
-    {'TP': 4, 'FP': 3, 'TN': 2, 'FN': 2}
+    {'FN': 2, 'FP': 3, 'TN': 2, 'TP': 4}
 
 
 
 Take a look at the `example_preds` and `example_labels` lists in the cell above. Confirm that the counts in the confusion matrix the function output are correct--it's good practice to be able to do this manually!
 
-### Confusion Matrices for Multi-Categorical Classification Problems
+## Confusion Matrices for Multi-Categorical Classification Problems
 
 So far, we've kept it simple by only focusing on Confusion Matrices for binary classification problems. However, it's common to see classification tasks that **_Multi-categorical_** in nature. We can keep track of these by just expanding the number of rows and columns in our confusion matrix!
 
@@ -115,7 +115,7 @@ cf
 
 
     array([[2, 3],
-           [2, 4]], dtype=int64)
+           [2, 4]])
 
 
 
@@ -138,13 +138,13 @@ cf2
     array([[2, 0, 1, 0],
            [0, 2, 1, 1],
            [0, 1, 3, 0],
-           [1, 0, 0, 2]], dtype=int64)
+           [1, 0, 0, 2]])
 
 
 
 Take a minute to examine the output above, and see if you can interpret the Confusion Matrix correctly. For instance, see if you can figure out how many 3's were mistakenly predicted to be a 0. 
 
-### Visualizing Confusion Matrices with Matplotlib
+## Visualizing Confusion Matrices with Matplotlib
 
 As a final topic on this subject, we'll go over some brief boilerplate code for how we can visualize a confusion matrix using matplotlib. Don't worry if you don't understand this code off the bat--the more you use it and play around with it, the more you'll understand it. 
 
@@ -185,7 +185,7 @@ show_cf(example_labels, example_preds)
 ```
 
 
-![png](output_7_0.png)
+![png](index_files/index_7_0.png)
 
 
 Note that we can also use this function to visualize multi-categorical confusion matrices!
@@ -196,9 +196,9 @@ show_cf(ex2_labels, ex2_preds)
 ```
 
 
-![png](output_9_0.png)
+![png](index_files/index_9_0.png)
 
 
-### What Next?
+## Summary
 
 On their own, Confusion Matrices are a very handy tool to help us understand at a glance how well a classification model is performing. However, we'll see that the truly useful information comes when we use confusion matrices to calculate **_Evaluation Metrics_** such as accuracy, precision, and recall!
