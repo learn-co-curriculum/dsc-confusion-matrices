@@ -9,8 +9,9 @@ In this lesson, you'll learn to construct and interpret a **_Confusion Matrix_**
 
 You will be able to:
 
-* Create and interpret a Confusion Matrix using numpy
-* Create and interpret a Confusion Matrix using sklearn
+* Describe the components of a confusion matrix
+* Interpret a confusion matrix
+* Create a Confusion Matrix using sklearn
 
 ## How to Evaluate Classifier Performance?
 
@@ -31,60 +32,6 @@ Let's take a look at an example Confusion Matrix:
 As you can see, one axis of the Confusion Matrix represents the ground-truth value of the items the model made predictions on, while the other axis represents the label predicted by the classifier. To read a confusion matrix, look at the intersection of each row and column to tell what each cell represents. For instance, in the example above, the bottom right square represents _True Positives_, because it is the intersection of "True Label: 1" row and the "Predicted Label: 1" column. 
 
 Take another look at the diagram above and see if you can figure out which cell which cells represent TP, FP, and FN. 
-
-## Constructing a Confusion Matrix
-
-In order to construct a Confusion Matrix, you'll need 2 things:
-
-* Predictions for each data point in a training or testing set. 
-* Labels for the same data points in that training or testing set. 
-
-Writing a Confusion Matrix from scratch in Python is a pretty intuitive process, since our labels and our predictions have the same order (e.g. `predictions[0]` and `lablels[0]` both refer to the same row in our dataset).
-
-To create a Confusion Matrix from scratch:
-
-1. Iterate through both lists and grab the item at the same the label and corresponding prediction.  Note that `enumerate` is great here, since it gives us both an item and the index of that item from a list. 
-2. Use some control flow to determine if its a TP, TN, FP, or FN. 
-3. Store the results in a dictionary or 2-dimensional array. 
-4. Return the results once we've checked every prediction against its corresponding label. 
-
-
-```python
-def confusion_matrix(labels, predictions):
-    conf_matrix = {"TP": 0, "FP": 0, "TN": 0, "FN": 0}
-    for ind, label in enumerate(labels):
-        pred = predictions[ind]
-        if label == 1:
-            # CASE: True Positive
-            if label == pred:
-                conf_matrix['TP'] += 1
-            # CASE: False Negative 
-            else:
-                conf_matrix['FN'] += 1
-        else:
-            # CASE: True Negative
-            if label == pred:
-                conf_matrix['TN'] += 1
-            # CASE: False Positive
-            else:
-                conf_matrix['FP'] += 1
-    
-    return conf_matrix
-
-example_preds = [1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1]
-example_labels= [1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0]
-
-confusion_matrix(example_labels, example_preds)
-```
-
-
-
-
-    {'TP': 4, 'FP': 3, 'TN': 2, 'FN': 2}
-
-
-
-Take a look at the `example_preds` and `example_labels` lists in the cell above. Confirm that the counts in the confusion matrix the function output are correct--it's good practice to be able to do this manually!
 
 ## Confusion Matrices for Multi-Categorical Classification Problems
 
