@@ -51,6 +51,8 @@ Since **_Confusion Matrices_** are a vital part of evaluating supervised learnin
 
 ```python
 from sklearn.metrics import confusion_matrix
+example_labels = [0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1]
+example_preds  = [0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1]
 
 cf = confusion_matrix(example_labels, example_preds)
 cf
