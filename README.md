@@ -31,7 +31,7 @@ Let's take a look at an example Confusion Matrix:
 
 As you can see, one axis of the Confusion Matrix represents the ground-truth value of the items the model made predictions on, while the other axis represents the label predicted by the classifier. To read a confusion matrix, look at the intersection of each row and column to tell what each cell represents. For instance, in the example above, the bottom right square represents _True Positives_, because it is the intersection of "True Label: 1" row and the "Predicted Label: 1" column. 
 
-Take another look at the diagram above and see if you can figure out which cell which cells represent TP, FP, and FN. 
+Take another look at the diagram above and see if you can figure out which cells represent TP, FP, and FN. 
 
 ## Confusion Matrices for Multi-Categorical Classification Problems
 
@@ -41,7 +41,7 @@ So far, we've kept it simple by only focusing on Confusion Matrices for binary c
 
 This example is from the Reuters Newsgroups dataset. As we can see in the example above, we just use an equivalent number of rows and columns, with each row and column sharing the same index referring to the same class. In this, the true labels are represented by the rows, while the predicted classes are represented by the columns. 
 
-Take a look at the diagonal starting in the top-left and moving down and to the right. This diagonal represents our **_True Positives_**, since the indexes are the same for both row and column. For instance, we can see at location \[19, 19\] that 281 political articles about guns were correctly classified as political articles about guns. Since our model is multi-categorical, we may also be interested in exactly **_how_** a model was incorrect with certain predictions. For instance, by looking at \[4, 19\] that 33 articles that were of category _talk.politics.misc_ were incorrectly classified as _talk.politics.guns_.  Note that when viewed through the lens of the _talk.politics.misc_, these are **_False Negatives_**--our model said they weren't about this topic, and they were. However, they are also **_False Positives_** for _talk.politics.guns_, since our model said they were about this, and they weren't!
+Take a look at the diagonal starting in the top-left and moving down and to the right. This diagonal represents our **_True Positives_** since the indexes are the same for both row and column. For instance, we can see at location \[19, 19\] that 281 political articles about guns were correctly classified as political articles about guns. Since our model is multi-categorical, we may also be interested in exactly **_how_** a model was incorrect with certain predictions. For instance, by looking at \[4, 19\] that 33 articles that were of category _talk.politics.misc_ were incorrectly classified as _talk.politics.guns_.  Note that when viewed through the lens of the _talk.politics.misc_, these are **_False Negatives_**--our model said they weren't about this topic, and they were. However, they are also **_False Positives_** for _talk.politics.guns_, since our model said they were about this, and they weren't!
 
 
 ### Using sklearn To Create Confusion Matrices
