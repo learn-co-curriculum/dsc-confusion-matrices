@@ -9,9 +9,9 @@ In this lesson, you'll learn how to construct and interpret a **_Confusion Matri
 
 You will be able to:
 
-* Describe the components of a confusion matrix
-* Interpret a confusion matrix
-* Create a Confusion Matrix using sklearn
+- Describe the four quadrants of a confusion matrix 
+- Interpret a confusion matrix  
+- Create a confusion matrix using scikit-learn 
 
 ## How to evaluate classifier performance?
 
