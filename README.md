@@ -35,7 +35,7 @@ Take another look at the diagram above and see if you can figure out which cells
 
 ## Confusion matrices for multi-categorical classification
 
-So far, we've kept it simple by only focusing on confusion matrices for binary classification problems. However, it's common to see classification tasks that **_multi-categorical_** in nature. We can keep track of these by just expanding the number of rows and columns in our confusion matrix!
+So far, we've kept it simple by only focusing on confusion matrices for binary classification problems. However, it's common to see classification tasks that are **_multi-categorical_** in nature. We can keep track of these by just expanding the number of rows and columns in our confusion matrix!
 
 <img src='./images/cm2.png'>
 
