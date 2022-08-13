@@ -1,4 +1,3 @@
-
 # Confusion Matrices
 
 ## Introduction
@@ -31,7 +30,7 @@ Let's take a look at an example confusion matrix:
 
 As you can see, one axis of the confusion matrix represents the ground-truth value of the items the model made predictions on, while the other axis represents the labels predicted by the classifier. To read a confusion matrix, look at the intersection of each row and column to tell what each cell represents. For instance, in the example above, the bottom right square represents _True Positives_, because it is the intersection of "True Label: 1" row and the "Predicted Label: 1" column. 
 
-Take another look at the diagram above and see if you can figure out which cells represent TP, FP, and FN. 
+Take another look at the diagram above and see if you can figure out which cells represent TN, FP, and FN. 
 
 ## Confusion matrices for multi-categorical classification
 
