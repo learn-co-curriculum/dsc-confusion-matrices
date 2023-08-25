@@ -26,7 +26,7 @@ A confusion matrix tells us four important things. Let's assume a model was trai
 
 Let's take a look at an example confusion matrix:
 
-<img src='./images/rf-conf-matrix.png'>
+<img src='https://curriculum-content.s3.amazonaws.com/data-science/images/rf-conf-matrix.png'>
 
 As you can see, one axis of the confusion matrix represents the ground-truth value of the items the model made predictions on, while the other axis represents the labels predicted by the classifier. To read a confusion matrix, look at the intersection of each row and column to tell what each cell represents. For instance, in the example above, the bottom right square represents _True Positives_, because it is the intersection of "True Label: 1" row and the "Predicted Label: 1" column. 
 
@@ -36,7 +36,7 @@ Take another look at the diagram above and see if you can figure out which cells
 
 So far, we've kept it simple by only focusing on confusion matrices for binary classification problems. However, it's common to see classification tasks that are **_multi-categorical_** in nature. We can keep track of these by just expanding the number of rows and columns in our confusion matrix!
 
-<img src='./images/cm2.png'>
+<img src='https://curriculum-content.s3.amazonaws.com/data-science/images/cm2.png'>
 
 This example is from the Reuters Newsgroups dataset. As we can see in the example above, we use an equivalent number of rows and columns, with each row and column sharing the same index referring to the same class. In this, the true labels are represented by the rows, while the predicted classes are represented by the columns. 
 
